@@ -1,6 +1,6 @@
 import axios from "axios"
-const backendURL = 'http://localhost:7000/api/subCategories'
-const recommendationsURL = 'http://localhost:7000/api/recommendations/'
+const backendURL = 'https://full-pack.herokuapp.com/api/subCategories'
+const recommendationsURL = 'https://full-pack.herokuapp.com/api/recommendations/'
 export default class CategoryService
 {
     static async getAll(limit = 10, page = 1)
