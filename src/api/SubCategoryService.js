@@ -1,7 +1,7 @@
 import axios from "axios"
 const backendURL = 'https://full-pack.herokuapp.com/api/subCategories'
 const recommendationsURL = 'https://full-pack.herokuapp.com/api/recommendations/'
-export default class CategoryService
+export default class SubCategoryService
 {
     static async getAll(limit = 10, page = 1)
     {
@@ -20,11 +20,7 @@ export default class CategoryService
     static async getById(id)
     {
         try {
-            const response = await axios.get(recommendationsURL, {
-                params: {
-                    id: id
-                }
-            })
+            const response = await axios.get(recommendationsURL + id)
             return response
         }catch(e) {
             console.log(e)

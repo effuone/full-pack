@@ -4,10 +4,10 @@ import { useCategories } from "../hooks/useCategories"
 import CategoryList from '../components/CategoryList'
 import CategoryFilter from "../components/CategoryFilter"
 import Loader from "../components/ui/loader/Loader"
-import CategoryService from "../api/CategoryService"
 import Pagination from "../components/ui/pagination/Pagination"
 import { getPageCount } from "../utils/pages"
 import { useFetching } from "../hooks/useFetching"
+import SubCategoryService from "../api/SubCategoryService"
 const Categories = () => {
   const [categories, setCategories] = useState([])
   const [filter, setFilter] = useState({sort: '', query: ''})
@@ -16,7 +16,7 @@ const Categories = () => {
   const [page, setPage] = useState(1);
   const sortedAndSearchedCategories = useCategories(categories, filter.sort, filter.query)
   const [fetchCategories, areCategoriesLoading, categoryError] = useFetching(async(limit, page)=>{
-    const response = await CategoryService.getAll(limit, page);
+    const response = await SubCategoryService.getAll(limit, page);
     setCategories(response.data.results)
     const totalCount = response.data['totalCount']
     setTotalPages(getPageCount(totalCount, limit))
