@@ -12,9 +12,9 @@ const CategoryFilter = ({filter,setFilter}) => {
             <MySelect
             value={filter.sort}
             onChange={selectedSort => setFilter({...filter, sort:selectedSort})}
-            defaultValue="Sort"
+            defaultValue="Sorting"
             options={[
-                {value:'category', name:'By category'},
+                {value:'category', name:'By category', selected: 'true'},
                 {value:'name', name:'By name'},
             ]}
             />

@@ -12,7 +12,7 @@ export const useSortedCategories = (categories, sort) => {
 export const useCategories = (categories, sort, query) => {
     const sortedCategories = useSortedCategories(categories, sort);
     const sortedAndSearchedCategories = useMemo(()=>{
-        return sortedCategories.filter(category=>category.category.toLowerCase().includes(query.toLowerCase()))
+        return sortedCategories.filter(category=>category.name.toLowerCase().includes(query.toLowerCase()))
       }, [query, sortedCategories])
     return sortedAndSearchedCategories
 }

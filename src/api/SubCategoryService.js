@@ -3,7 +3,7 @@ const backendURL = 'https://full-pack.herokuapp.com/api/subCategories'
 const recommendationsURL = 'https://full-pack.herokuapp.com/api/recommendations/'
 export default class SubCategoryService
 {
-    static async getAll(limit = 10, page = 1)
+    static async getAll(limit = 660, page = 1)
     {
         try {
             const response = await axios.get(backendURL, {

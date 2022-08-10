@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark py-3">
         <div className="container">
-           <a href="#" className="navbar-brand text-dark">Fullpack</a>
+           <Nav.Link as={Link} to="/about" className="navbar-brand text-dark">Fullpack</Nav.Link>
            <button 
               className="navbar-toggler" 
               type="button" 
@@ -17,10 +17,10 @@ const Header = () => {
            <div className="collapse navbar-collapse">
               <ul className="navbar-nav">
                  <li className="nav-item">
-                     <Nav.Link as={Link} to="/about" className="text-dark">About</Nav.Link>
+                     <Nav.Link as={Link} to="/about" className="text-dark">О проекте</Nav.Link>
                  </li>
                  <li className="nav-ites">
-                     <Nav.Link as={Link} to="/categories" className="text-dark">Categories</Nav.Link>
+                     <Nav.Link as={Link} to="/categories" className="text-dark">Категории</Nav.Link>
                  </li>
               </ul>
            </div>

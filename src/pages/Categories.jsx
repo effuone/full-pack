@@ -12,7 +12,7 @@ const Categories = () => {
   const [categories, setCategories] = useState([])
   const [filter, setFilter] = useState({sort: '', query: ''})
   const [totalPages, setTotalPages] = useState(0);
-  const [limit, setLimit] = useState(15);
+  const [limit, setLimit] = useState(600);
   const [page, setPage] = useState(1);
   const sortedAndSearchedCategories = useCategories(categories, filter.sort, filter.query)
   const [fetchCategories, areCategoriesLoading, categoryError] = useFetching(async(limit, page)=>{

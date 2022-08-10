@@ -10,14 +10,14 @@ const About = () => {
         <div className="container">
             <div className="d-lg-flex align-items-center justify-content-between">
                 <div>
-                    <h1 className="text-dark">Choose categories and <span className="text-primary">
-                     buy optimal products!
+                    <h1 className="text-dark">Выберите категории и <span className="text-primary">
+                    покупайте оптимальные продукты!
                     </span></h1>
                     <p className="lead my-4 text-dark">
-                    Our system analyzes more than <span className="text-danger">100,000 </span> products from <span className="text-danger">Kaspi.kz and Sulpak.kz </span> 
-                    and identifies the most optimal price to buy
+                    Наша система анализирует более <span className="text-danger">100,000</span> продуктов из <span className="text-danger">Kaspi.kz и Sulpak.kz </span> 
+                    и определяет наиболее оптимальную цену для покупки
                     </p>
-                    <button className="btn btn-primary btn-lg" onClick={changePage}>Go for categories</button>
+                    <button className="btn btn-primary btn-lg" onClick={changePage}>Узнать среднюю цену</button>
                 </div>
                 <img className="img-fluid w-40 d-none d-sm-block" src={ecommerce} alt=""/>
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import classes from "./MySelect.module.css"
 
 const MySelect = ({options, defaultValue, value, onChange}) => {
  return(
