@@ -6,6 +6,16 @@ import {Card, Button} from 'react-bootstrap'
 import Loader from "../components/ui/loader/Loader";
 import ProductItem from "../components/ProductItem";
 
+function isEmpty(obj) {
+    for(var prop in obj) {
+      if(Object.prototype.hasOwnProperty.call(obj, prop)) {
+        return false;
+      }
+    }
+  
+    return JSON.stringify(obj) === JSON.stringify({});
+  }
+
 const CategoryIdPage = ()=>{
     const params = useParams()
     const [product, setProduct] = useState({})
@@ -22,7 +32,7 @@ const CategoryIdPage = ()=>{
             <h1>Best product of this category is: </h1>
             {isLoading
             ? <Loader/>
-            : <ProductItem product={product}/>
+            : !isEmpty(product) ? <ProductItem product={product}/> : <div style={{color:'red', fontSize:'50px', justifyContent:'center'}}>Item is unavailable on marketplaces :(</div>
             }
         </div>
     )
